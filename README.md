@@ -44,6 +44,7 @@ cd ddosmon
 cmake .
 make -j`nproc`
 echo '/opt/ddosmon/ddosmon /opt/ddosmon/configs/example.lua' > /bin/ddosmon; chmod +x /bin/ddosmon
+mkdir -p /opt/ddosmon/logs/; touch /opt/ddosmon/logs/example.log
 ddosmon
 ```
 
