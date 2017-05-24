@@ -26,7 +26,6 @@ mkdir build && cd build
 cmake ..
 make
 ```
-
 ### Running
 
 ```
@@ -34,6 +33,18 @@ make
 screen 
 
 sudo ./build/ddosmon configs/example.lua
+```
+
+### xUbuntu 14.04
+```
+apt-get update; apt-get upgrade -y; apt-get dist-upgrade -y
+apt-get install build-essential libboost-all-dev libssl-dev libncurses5-dev liblua5.1-0-dev -y
+cd /opt/; git clone https://github.com/systemroot/ddosmon.git
+cd ddosmon
+cmake .
+make -j`nproc`
+echo '/opt/ddosmon/ddosmon /opt/ddosmon/configs/example.lua' > /bin/ddosmon; chmod +x /bin/ddosmon
+ddosmon
 ```
 
 **NOTE:** Root is needed for sniffing the network adapter packets.
