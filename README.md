@@ -38,7 +38,7 @@ sudo ./build/ddosmon configs/example.lua
 ### xUbuntu 14.04
 ```
 apt-get update; apt-get upgrade -y; apt-get dist-upgrade -y
-apt-get install build-essential libboost-all-dev libssl-dev libncurses5-dev liblua5.1-0-dev -y
+apt-get install build-essential cmake make libboost-all-dev libssl-dev libncurses5-dev liblua5.1-0-dev -y
 cd /opt/; git clone https://github.com/systemroot/ddosmon.git
 cd ddosmon
 cmake .
